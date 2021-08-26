@@ -16,4 +16,6 @@ insert into employee_payroll (Name, Salary, StartDate) values ('BunnySunny', '15
 
 insert into employee_payroll (Name, Salary, StartDate) values ('Bunty', '100', '15-6-2019')
 
+select * from employee_payroll
+
 
