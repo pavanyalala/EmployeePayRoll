@@ -18,4 +18,8 @@ insert into employee_payroll (Name, Salary, StartDate) values ('Bunty', '100', '
 
 select * from employee_payroll
 
+Select Salary from employee_payroll where Name='bunny'
+
+Select Salary from employee_payroll where Startdate between ('1-1-2018') and ('24-8-2021')
+
 
