@@ -56,5 +56,18 @@ Select Salary from employee_payroll where Startdate between ('1-1-2018') and ('2
 
  SELECT COUNT(Salary) as Male_Employees FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender
 
+ /*Uc8 Add colums like employee_phno,Address,Dept */
+
+ ALTER TABLE employee_payroll
+ ADD PhoneNumber varchar(10)
+
+ ALTER TABLE employee_payroll
+ ADD Address varchar(20) NOT NULL DEFAULT ('Hyderabad')
+
+ ALTER TABLE employee_payroll
+ ADD Department VARCHAR (20) NOT NULL DEFAULT ('CompanyEmployee')
+
+
+
 
 
