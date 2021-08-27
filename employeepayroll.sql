@@ -34,7 +34,27 @@ Select Salary from employee_payroll where Startdate between ('1-1-2018') and ('2
 
   set Gender='F' where name = 'Honey'
 
+  alter table employee_payroll alter COLUMN Salary int
  
+ SELECT SUM(Salary) as Total_Salary FROM employee_payroll WHERE Gender = 'F' GROUP BY Gender
+
+ SELECT SUM(Salary) as Total_Salary FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender
+
+ SELECT AVG(Salary) as Average_Salary FROM employee_payroll WHERE Gender = 'F' GROUP BY Gender
+
+ SELECT AVG(Salary) as Average_Salary FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender
+
+ SELECT MIN(Salary) as Minimum_Salary FROM employee_payroll WHERE Gender = 'F' GROUP BY Gender
+
+ SELECT MIN(Salary) as Minimum_Salary FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender
+
+ SELECT MAX(Salary) as Maximum_Salary FROM employee_payroll WHERE Gender = 'F' GROUP BY Gender
+
+ SELECT MAX(Salary) as Maximum_Salary FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender
+
+ SELECT COUNT(Salary) as Female_Employees FROM employee_payroll WHERE Gender = 'F' GROUP BY Gender
+
+ SELECT COUNT(Salary) as Male_Employees FROM employee_payroll WHERE Gender = 'M' GROUP BY Gender
 
 
 
