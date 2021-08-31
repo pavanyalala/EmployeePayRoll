@@ -114,3 +114,14 @@ Select Salary from employee_payroll where Startdate between ('1-1-2018') and ('2
   Update Employee_Payroll 
   set BasicPay=10000 ,Deductions=500, TaxablePay=200,IncomeTax=300,NetPay=9500 where name='Honey'
 
+  /*UC-10*/
+
+insert into employee_payroll (Name, Salary, StartDate, Gender, PhoneNumber, Address, Department, BasicPay, Deductions, TaxablePay, IncomeTax, Netpay) values ('Terisa', '20000', '10-4-2019', 'F', '9988774455', 'Hyd', 'Sales', '15000', '1000', '500', '500', '14000')
+
+insert into employee_payroll (Name, Salary, StartDate, Gender, PhoneNumber, Address, Department, BasicPay, Deductions, TaxablePay, IncomeTax, Netpay) values ('Terisa', '25000', '10-4-2019', 'F', '9988774455', 'Hyd', 'Marketing', '14000', '1000', '500', '500', '13000')
+
+
+Select * from employee_payroll
+
+
+
