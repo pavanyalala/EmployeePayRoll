@@ -67,7 +67,50 @@ Select Salary from employee_payroll where Startdate between ('1-1-2018') and ('2
  ALTER TABLE employee_payroll
  ADD Department VARCHAR (20) NOT NULL DEFAULT ('CompanyEmployee')
 
+ Update employee_payroll
+ set PhoneNumber = '9999999999',Address = 'Chennai',Department = 'Accounts' where Name = 'Bunny'
 
+ Update employee_payroll
+ set PhoneNumber = '8888888888',Address = 'Hyderabad',Department = 'HR' where Name = 'Sunny'
 
+ Update employee_payroll
+ set PhoneNumber = '9999999777',Address = 'Mumbai',Department = 'Manager' where Name = 'BunnySunny'
 
+ Update employee_payroll
+ set PhoneNumber = '9999999666',Address = 'Kerala',Department = 'Developer' where Name = 'Bunty'
+
+ Update employee_payroll
+ set PhoneNumber = '9999999555',Address = 'Vizag',Department = 'Data Analyst' where Name = 'Honey'
+
+ /*UC-9 Add Payment columns*/
+
+  alter table employee_payroll
+  Add BasicPay float
+
+  alter table employee_payroll
+  Add Deductions float
+
+  alter table employee_payroll
+  Add TaxablePay float
+
+  alter table employee_payroll
+  Add IncomeTax float
+
+  alter table employee_payroll
+  Add NetPay float
+
+  Update employee_payroll 
+  set BasicPay=4000 ,Deductions=500, TaxablePay=200,IncomeTax=300,NetPay=3500 where name='Bunny'
+
+  Update Employee_Payroll 
+  set BasicPay=5000 ,Deductions=500, TaxablePay=200,IncomeTax=300,NetPay=4500 where name='Sunny'
+
+  Update Employee_Payroll 
+  set BasicPay=50000 ,Deductions=5000, TaxablePay=2000,IncomeTax=3000,NetPay=45000 where name='BunnySunny'
+ 
+  Update Employee_Payroll 
+  set BasicPay=40000 ,Deductions=5000, TaxablePay=2000,IncomeTax=3000,NetPay=35000 where name='Bunty'
+
+  Update Employee_Payroll 
+  set BasicPay=10000 ,Deductions=500, TaxablePay=200,IncomeTax=300,NetPay=9500 where name='Honey'
 
