@@ -247,3 +247,13 @@ on EmployeeDetails.EmployeeId=Payroll.EmployeeId
 Where Gender='M' 
 Group by EmployeeDetails.Gender  
 
+/*uc12*/
+
+SELECT * FROM EmployeeDetails
+SELECT * FROM Payroll
+SELECT * FROM Department
+
+
+SELECT * FROM EmployeeDetails emp, Payroll pay, Department dep where emp.EmployeeId=pay.EmployeeId and  emp.DeptId=dep.DeptId
+
+
