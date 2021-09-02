@@ -116,12 +116,78 @@ Select Salary from employee_payroll where Startdate between ('1-1-2018') and ('2
 
   /*UC-10*/
 
-insert into employee_payroll (Name, Salary, StartDate, Gender, PhoneNumber, Address, Department, BasicPay, Deductions, TaxablePay, IncomeTax, Netpay) values ('Terisa', '20000', '10-4-2019', 'F', '9988774455', 'Hyd', 'Sales', '15000', '1000', '500', '500', '14000')
+insert into employee_payroll 
+(Name, Salary, StartDate, Gender, PhoneNumber, Address, Department, BasicPay, Deductions, TaxablePay, IncomeTax, Netpay) values ('Terisa', '20000', '10-4-2019', 'F', '9988774455', 'Hyd', 'Sales', '15000', '1000', '500', '500', '14000')
 
-insert into employee_payroll (Name, Salary, StartDate, Gender, PhoneNumber, Address, Department, BasicPay, Deductions, TaxablePay, IncomeTax, Netpay) values ('Terisa', '25000', '10-4-2019', 'F', '9988774455', 'Hyd', 'Marketing', '14000', '1000', '500', '500', '13000')
+insert into employee_payroll 
+(Name, Salary, StartDate, Gender, PhoneNumber, Address, Department, BasicPay, Deductions, TaxablePay, IncomeTax, Netpay) values ('Terisa', '25000', '10-4-2019', 'F', '9988774455', 'Hyd', 'Marketing', '14000', '1000', '500', '500', '13000')
 
 
 Select * from employee_payroll
+Where Name = 'Terisa'
+
+ Update employee_payroll 
+  set BasicPay=30000,Deductions=4000, TaxablePay=1500,IncomeTax=900,NetPay=26000 where Name='Terisa'
+
+  Update employee_payroll 
+  set BasicPay=50000 ,Deductions=10000, TaxablePay=7000,IncomeTax=4000,NetPay=40000 where Id=9
 
 
+  create table EmployeeDetails(
+
+  EmployeeId int identity (1,1) primary key,
+  Name varchar (20) not null,
+  Gender varchar (1) not null,
+  PhoneNumber float (12) not null,
+  Address varchar (20) not null,
+  JoiningDate date not null,
+  DeptId int not null
+  )
+
+  select * from EmployeeDetails
+
+  Create Table Payroll(
+
+  SalaryId int identity(1,1) Primary key,
+  EmployeeId int,
+  BasicPay float not null,
+  Deductions float not null,
+  TaxablePay float not null,
+  IncomeTax float not null,
+  NetPay float not null
+  )
+
+  select * from Payroll
+
+  Create Table Department(
+
+  DeptId int identity(1,1) Primary key,
+  DeptName varchar(20) not null
+  )
+
+  select * from Department
+
+  Alter Table EmployeeDetails
+  Add Foreign key (DeptId)
+  References Department(DeptId)
+
+  Alter Table Payroll
+  Add Foreign key (EmployeeId)
+  References EmployeeDetails(EmployeeId)
+
+  Insert into Department(DeptName) values ('Hr'), ('Admin'), ('Accounts')
+
+  Insert into EmployeeDetails(Name, Gender, PhoneNumber, Address, JoiningDate, DeptId) 
+  values
+  ('Pavan','M',9010073313,'Hyderabad','2015-2-15','1'),
+  ('Terissa','F',9999999999,'Delhi','2018-5-18','2'),
+  ('Terissa','F',8888888888,'Chennai','2020-8-25','3')
+
+  Insert into Payroll(EmployeeId, BasicPay, Deductions, TaxablePay, IncomeTax, NetPay)
+  values
+  (5, 50000, 3000, 47000, 2000, 45000),
+  (6, 45000, 4000, 41000, 3000, 38000),
+  (7, 40000, 3000, 37000, 2000, 35000)
+  
+  
 
