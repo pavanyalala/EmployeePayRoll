@@ -188,6 +188,62 @@ Where Name = 'Terisa'
   (5, 50000, 3000, 47000, 2000, 45000),
   (6, 45000, 4000, 41000, 3000, 38000),
   (7, 40000, 3000, 37000, 2000, 35000)
+
+  /*UC11*/
+
+Select Sum(Payroll.BasicPay) 
+From Payroll 
+Join EmployeeDetails 
+on EmployeeDetails.EmployeeId=Payroll.EmployeeId 
+Where Gender='F' 
+Group by EmployeeDetails.Gender
+
+Select Sum(Payroll.BasicPay) 
+From Payroll 
+Join EmployeeDetails 
+on EmployeeDetails.EmployeeId=Payroll.EmployeeId 
+Where Gender='M' 
+Group by EmployeeDetails.Gender
+
+Select Avg(Payroll.BasicPay) 
+From Payroll 
+Join EmployeeDetails 
+on EmployeeDetails.EmployeeId=Payroll.EmployeeId 
+Where Gender='F' 
+Group by EmployeeDetails.Gender
+
+Select Avg(Payroll.BasicPay) 
+From Payroll 
+Join EmployeeDetails 
+on EmployeeDetails.EmployeeId=Payroll.EmployeeId 
+Where Gender='M' 
+Group by EmployeeDetails.Gender
+
+Select Max(Payroll.BasicPay) 
+From Payroll 
+Join EmployeeDetails 
+on EmployeeDetails.EmployeeId=Payroll.EmployeeId 
+Where Gender='F' 
+Group by EmployeeDetails.Gender
+
+Select Max(Payroll.BasicPay) 
+From Payroll 
+Join EmployeeDetails 
+on EmployeeDetails.EmployeeId=Payroll.EmployeeId 
+Where Gender='M' 
+Group by EmployeeDetails.Gender
+
+Select Count(Payroll.BasicPay) 
+From Payroll 
+Join EmployeeDetails 
+on EmployeeDetails.EmployeeId=Payroll.EmployeeId 
+Where Gender='F' 
+Group by EmployeeDetails.Gender
   
-  
+Select Count(Payroll.BasicPay) 
+From Payroll 
+Join EmployeeDetails 
+on EmployeeDetails.EmployeeId=Payroll.EmployeeId 
+Where Gender='M' 
+Group by EmployeeDetails.Gender  
 
